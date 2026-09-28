@@ -21,16 +21,6 @@ brew install ai-usage-bar
 brew services start ai-usage-bar
 ```
 
-### [otp](https://github.com/kube-guy/otp-cli)
-
-TOTP(RFC 6238) 코드를 생성합니다. 시크릿은 macOS Keychain 에 저장하고,
-단축키를 누르면 커서 위치에 코드를 바로 입력합니다.
-
-```sh
-brew trust --formula kube-guy/kit/otp
-brew install otp
-```
-
 ## 이전 버전 설치
 
 Homebrew 는 formula 파일 하나만 보고 버전을 정하므로, 기본으로는 최신만 설치됩니다.
@@ -53,7 +43,6 @@ formula 는 `Formula/` 에 있고, 각 도구의 소스는 별도 저장소에 �
 
 ```
 Formula/
-├── ai-usage-bar.rb
-└── otp.rb
+└── ai-usage-bar.rb
 install-version.sh   # 이전 버전 설치
 ```
