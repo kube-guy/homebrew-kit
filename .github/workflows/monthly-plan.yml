@@ -1,0 +1,30 @@
+name: monthly-plan Homebrew install
+on:
+  push:
+    branches: [main]
+    paths:
+      - Formula/monthly-plan.rb
+      - .github/workflows/monthly-plan.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  install:
+    runs-on: macos-15
+    steps:
+      - name: Tap and trust the formula
+        run: |
+          brew tap kube-guy/kit
+          if brew help trust >/dev/null 2>&1; then
+            brew trust --formula kube-guy/kit/monthly-plan
+          fi
+      - name: Install and test monthly-plan
+        run: |
+          brew install kube-guy/kit/monthly-plan
+          brew test kube-guy/kit/monthly-plan
+          monthly-plan --version
+      - name: Export images from installed app
+        run: |
+          monthly-plan --export-demo "$RUNNER_TEMP/monthly-plan.png"
+          monthly-plan --export-demo "$RUNNER_TEMP/monthly-plan.jpg"
+          sips -g pixelWidth -g pixelHeight "$RUNNER_TEMP/monthly-plan.png"
