@@ -24,6 +24,7 @@ monthly-plan
 
 macOS 14 이상과 Swift 6 도구 체인이 필요합니다. 이메일 로그인 링크를 앱으로 돌려보내려면
 Supabase 인증 설정에 `monthly-plan://auth/callback?state=*`을 허용해야 합니다.
+주차·후기 자동 요약을 사용하려면 Mac마다 `brew install --cask codex` 후 `codex login`으로 로그인하세요. 별도 OpenAI API 키는 필요하지 않습니다.
 
 ### [ai-usage-bar](https://github.com/kube-guy/ai-usage-bar)
 

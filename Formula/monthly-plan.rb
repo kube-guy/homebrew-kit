@@ -1,8 +1,8 @@
 class MonthlyPlan < Formula
   desc "Monthly calendar with places, image export, and Supabase sync"
   homepage "https://github.com/kube-guy/monthly-plan"
-  url "https://github.com/kube-guy/monthly-plan/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "c614a4da12475ec9557c42e46a7f5846ac86bc3f970bf5d7b7db28bfb15ae8fa"
+  url "https://github.com/kube-guy/monthly-plan/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "1e64cf77e79480ab2295fc8fdb44e4b726721bbb214d70d02566e104f8222642"
   license "MIT"
   head "https://github.com/kube-guy/monthly-plan.git", branch: "main"
 
@@ -17,7 +17,7 @@ class MonthlyPlan < Formula
     (bin/"monthly-plan").write <<~SH
       #!/bin/bash
       app="#{libexec}/Monthly Plan.app"
-      if [[ "${1:-}" == "--version" || "${1:-}" == "--export-demo" ]]; then
+      if [[ "${1:-}" == "--version" || "${1:-}" == "--export-empty" || "${1:-}" == "--summarize-place" ]]; then
         exec "$app/Contents/MacOS/monthly-plan" "$@"
       fi
       exec /usr/bin/open -a "$app" --args "$@"
@@ -30,6 +30,8 @@ class MonthlyPlan < Formula
       Launch the app with `monthly-plan`.
       To sync between Macs, connect your Supabase project in the app and add
       monthly-plan://auth/callback?state=* to its Authentication redirect URLs.
+      For automatic place summaries, install Codex CLI (`brew install --cask codex`)
+      and sign in with `codex login` on each Mac.
     EOS
   end
 

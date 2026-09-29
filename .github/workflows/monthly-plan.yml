@@ -25,6 +25,6 @@ jobs:
           monthly-plan --version
       - name: Export images from installed app
         run: |
-          monthly-plan --export-demo "$RUNNER_TEMP/monthly-plan.png"
-          monthly-plan --export-demo "$RUNNER_TEMP/monthly-plan.jpg"
+          monthly-plan --export-empty "$RUNNER_TEMP/monthly-plan.png"
+          monthly-plan --export-empty "$RUNNER_TEMP/monthly-plan.jpg"
           sips -g pixelWidth -g pixelHeight "$RUNNER_TEMP/monthly-plan.png"
