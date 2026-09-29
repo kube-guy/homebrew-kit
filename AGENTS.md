@@ -1,8 +1,7 @@
 # homebrew-kit
 
 kube-guy 의 macOS 유틸리티용 Homebrew tap.
-formula 는 `Formula/ai-usage-bar.rb` 하나뿐이고, 본체 저장소의 `scripts/release.sh` 가
-새 릴리스마다 `url` / `sha256` 을 갱신해 커밋한다.
+formula 는 `Formula/`에 도구별로 있으며, 각 도구의 릴리스 소스와 SHA-256을 가리킨다.
 
 ## 커밋 신원 — 전역 git 설정을 쓰지 않는다
 

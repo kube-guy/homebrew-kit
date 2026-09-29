@@ -11,6 +11,20 @@ tap 전체를 신뢰하려면 `brew trust kube-guy/kit`, formula 하나만 신�
 
 ## 담긴 도구
 
+### [monthly-plan](https://github.com/kube-guy/monthly-plan)
+
+월별 일정과 장소를 보고, 달력과 이달의 순간들을 이미지로 내보내는 macOS 앱입니다.
+Supabase 계정으로 여러 Mac의 일정을 동기화할 수 있습니다.
+
+```sh
+brew trust --formula kube-guy/kit/monthly-plan
+brew install kube-guy/kit/monthly-plan
+monthly-plan
+```
+
+macOS 14 이상과 Swift 6 도구 체인이 필요합니다. 이메일 로그인 링크를 앱으로 돌려보내려면
+Supabase 인증 설정에 `monthly-plan://auth/callback?state=*`을 허용해야 합니다.
+
 ### [ai-usage-bar](https://github.com/kube-guy/ai-usage-bar)
 
 Claude Code 와 Codex CLI 의 사용량 한도를 macOS 메뉴바에 표시합니다.
@@ -43,6 +57,7 @@ formula 는 `Formula/` 에 있고, 각 도구의 소스는 별도 저장소에 �
 
 ```
 Formula/
-└── ai-usage-bar.rb
+├── ai-usage-bar.rb
+└── monthly-plan.rb
 install-version.sh   # 이전 버전 설치
 ```
