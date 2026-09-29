@@ -22,6 +22,7 @@ class MonthlyPlan < Formula
       fi
       exec /usr/bin/open -a "$app" --args "$@"
     SH
+    (bin/"monthly-plan").chmod 0755
   end
 
   def caveats
