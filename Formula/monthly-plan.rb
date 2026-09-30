@@ -1,8 +1,8 @@
 class MonthlyPlan < Formula
   desc "Monthly calendar with places, image export, and Supabase sync"
   homepage "https://github.com/kube-guy/monthly-plan"
-  url "https://github.com/kube-guy/monthly-plan/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "1e64cf77e79480ab2295fc8fdb44e4b726721bbb214d70d02566e104f8222642"
+  url "https://github.com/kube-guy/monthly-plan/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "61a95c38e481ada4ca223d425b8efbbbcc69b8d4c3106e1424ac0bc0185a7c44"
   license "MIT"
   head "https://github.com/kube-guy/monthly-plan.git", branch: "main"
 
