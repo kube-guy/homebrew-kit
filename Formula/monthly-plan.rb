@@ -1,8 +1,8 @@
 class MonthlyPlan < Formula
   desc "Monthly calendar with Google Calendar, places, image export, and Supabase sync"
   homepage "https://github.com/kube-guy/monthly-plan"
-  url "https://github.com/kube-guy/monthly-plan/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "d6a06c838ebb9a8d0ac108f014c293998a5a7879d099b5c8c6bcc15f3050b613"
+  url "https://github.com/kube-guy/monthly-plan/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "091afeebe3df9d7dcdc8fd5e7f51b96628f911e76f9f8a4ca813500fa0e11217"
   license "MIT"
   head "https://github.com/kube-guy/monthly-plan.git", branch: "main"
 
@@ -32,8 +32,9 @@ class MonthlyPlan < Formula
       monthly-plan://auth/callback?state=* to its Authentication redirect URLs.
       For automatic place summaries, install Codex CLI (`brew install --cask codex`)
       and sign in with `codex login` on each Mac.
-      To show Google Calendar events, add the Google account to macOS Calendar,
-      then grant calendar access and select calendars inside monthly-plan.
+      Google account sign-in needs a configured Supabase Google provider.
+      Direct Google Calendar connection needs a Google Cloud Desktop OAuth client.
+      See the Google setup guides in the monthly-plan repository.
     EOS
   end
 
